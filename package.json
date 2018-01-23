@@ -1,0 +1,28 @@
+{
+  "name": "hetic-w2-p2019-11",
+  "version": "1.0.0",
+  "description": "Sample project for school",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "webpack": "^3.10.0"
+  },
+  "scripts": {
+    "start": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasLecot/hetic-w2-p2019-11.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LucasLecot/hetic-w2-p2019-11/issues"
+  },
+  "homepage": "https://github.com/LucasLecot/hetic-w2-p2019-11#readme"
+}
