@@ -1,6 +1,9 @@
 ///// TOOLS IMPORTS //////
 
-@import 'tools/fonts';
 @import 'tools/screen-mixins';
 @import 'tools/reset';
-@import 'tools/global-variable';
+@import 'tools/variable';
+
+///// UI IMPORTS //////
+
+@import 'partial/global';
