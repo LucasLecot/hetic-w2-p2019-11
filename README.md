@@ -6,9 +6,16 @@ Le projet requiert le gestionnaire de paquets npm installé avec node.js ou disp
 
 ## Commandes
 
-npm install --> installe toutes les dépendances
+Pour installer les dépendances:
+```
+npm install
+```
 
-npm run dev --> lance le serveur, permet de compiler les fichiers de dev en temps réel
+Pour lancer le serveur, permettre de compiler les fichiers de dev en temps réel!
+```
+npm run dev
+```
+
 
 ***
 
