@@ -1,6 +1,9 @@
 import '../scss/styles.scss';
 
 let insideCarView = document.querySelector('.fullScreenPart__view');
+let bigCircle = document.querySelector('.bigCircle');
+let middleCircle = document.querySelector('.middleCircle');
+
 var moveGesture = 50;
 var viewHeight = moveGesture / insideCarView.offsetHeight;
 var viewWidth = moveGesture / insideCarView.offsetWidth;
@@ -8,6 +11,7 @@ var viewWidth = moveGesture / insideCarView.offsetWidth;
 insideCarView.addEventListener("mousemove", function(event) {
     moveScreen(event);
 });
+
 
 function moveScreen(event) {
 
@@ -19,3 +23,4 @@ function moveScreen(event) {
 
     insideCarView.style.backgroundPosition = newvalueX + "px " + newvalueY + "px";
 }
+

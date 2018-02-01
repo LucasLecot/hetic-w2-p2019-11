@@ -3,10 +3,8 @@ body {
   width: 100%;
 
   .fullScreenPart {
-    height: 850px;
+    height: 100vh;
   }
 
-  @include minWidth($widthMobile) {
 
-  }
 }

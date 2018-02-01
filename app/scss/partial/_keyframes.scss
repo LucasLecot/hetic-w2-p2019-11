@@ -1,0 +1,21 @@
+@keyframes noise {
+  0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; transform: scaleY(1);}
+  4.3% {opacity: 0; transform: scaleY(1.5);}
+  43% {opacity: 1; transform: scaleX(1.5);}
+}
+
+
+@keyframes rotate-right{
+  0%{
+    -moz-transform: rotateZ(0deg);
+    -webkit-transform: rotateZ(0deg);
+    -o-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+  }
+  100%{
+    -moz-transform: rotateZ(360deg);
+    -webkit-transform: rotateZ(360deg);
+    -o-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+  }
+}
