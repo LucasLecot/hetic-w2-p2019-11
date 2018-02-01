@@ -2,10 +2,12 @@
 
 @import 'tools/screen-mixins';
 @import 'tools/reset';
-@import 'tools/variable';
 @import 'tools/fonts';
+@import 'tools/variable';
+
 
 ///// UI IMPORTS //////
 
+@import 'partial/keyframes';
 @import 'partial/global';
 @import 'partial/inside-car';

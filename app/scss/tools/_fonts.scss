@@ -5,19 +5,35 @@
 ///////// RALEWAY /////////////
 
 @font-face {
-  font-family: 'raleway';
-  src: url('../fonts/raleway/Raleway-Regular.ttf') format('ttf');
+  font-family: 'Raleway';
+  src: url('../fonts/raleway/Raleway-Regular.ttf');
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'raleway';
-  src: url('../fonts/raleway/Raleway-Light.ttf') format('ttf');
+  font-family: 'Raleway';
+  src: url('../fonts/raleway/Raleway-Light.ttf');
   font-weight: 300;
 }
 
 @font-face {
-  font-family: 'raleway';
-  src: url('../fonts/raleway/Raleway-Bold.ttf') format('ttf');
+  font-family: 'Raleway';
+  src: url('../fonts/raleway/Raleway-Bold.ttf');
+  font-weight: 700;
+}
+
+
+///////// SYNCOPATE /////////////
+
+
+@font-face {
+  font-family: 'Syncopate';
+  src: url('../fonts/syncopate/Syncopate-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Syncopate';
+  src: url('../fonts/syncopate/Syncopate-Bold.ttf');
   font-weight: 700;
 }
