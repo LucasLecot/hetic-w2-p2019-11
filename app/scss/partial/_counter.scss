@@ -1,42 +1,22 @@
 .counter {
-  padding: 10%;
+  padding: 4rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   background-color: $darkGrey;
   background-image: url("../images/volant_transparent.png");
-  background-size: 100%;
+  background-size: 70%;
+  background-position: 800px;
   background-repeat: no-repeat;
   @include minWidth($widthTablet) {
     padding: 3%;
   }
-  h3 {
-    width: 100%;
-    margin-bottom: 20px;
-    font-family: Syncopate;
-    color: white;
-    font-size: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 300;
-    position: relative;
-    @include minWidth($widthTablet) {
-      text-align: left;
-    }
-  }
-  h3:after {
-    content: '';
-    background: white;
-    height: 1px;
-    width: 50%;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-  }
+
 }
 
 .counter-wrapper {
   position: relative;
+
   .counter-info {
     position: absolute;
     top: 40%;
@@ -48,6 +28,10 @@
       font-family: 'Raleway';
       color: white;
     }
+  }
+
+  @include minWidth($widthDesktop) {
+    margin: 7rem;
   }
 }
 .counter-wrapper:last-child {
