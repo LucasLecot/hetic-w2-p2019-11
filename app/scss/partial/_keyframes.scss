@@ -19,3 +19,23 @@
     -ms-transform: rotateZ(360deg);
   }
 }
+
+@keyframes pulse {
+  100% {
+    box-shadow: 0 0 0 20px rgba(115, 213, 255, 0);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    left: 100px;
+  }
+  75% {
+    opacity: 0.5;
+    left: 0px;
+  }
+  100% {
+    opacity: 1;
+  }
+}

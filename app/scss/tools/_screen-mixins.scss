@@ -8,7 +8,6 @@ $widthMobile: 450px;
 $widthTablet: 768px;
 $widthDesktop: 1024px;
 
-
 @mixin minWidth($breakpointValue) {
   @media only screen and (min-width: $breakpointValue) {
     @content;

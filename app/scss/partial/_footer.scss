@@ -1,0 +1,39 @@
+footer {
+  padding: 2rem 0;
+  text-align: center;
+  background: $darkGrey;
+  color: white;
+  font-size: 3rem;
+  font-family: $syncopate;
+
+  p {
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+  }
+
+  li {
+
+    display: inline-block;
+    margin: 0 1.5rem;
+    font-size: 7rem;
+    color: $white;
+    transition: .20s ease;
+    @include minWidth($widthDesktop) {
+      &:hover {
+        transform: scale(1.06);
+      }
+    }
+  }
+
+  img {
+    width: 100px;
+    margin: 2rem auto;
+  }
+
+  .footer__social {
+    width: 70%;
+    margin: auto;
+    padding: 3rem 0;
+    border-top: 1px solid #403f3f;
+  }
+}
