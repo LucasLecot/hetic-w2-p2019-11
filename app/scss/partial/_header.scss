@@ -1,0 +1,122 @@
+header {
+    img {
+        display: block;
+        margin: 10px auto;
+    }
+    .head {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(white, #313030);
+
+        @include minWidth(768px) {
+            flex-direction: row;
+            margin-top: 50px;
+        }
+
+        &_car {
+            width: 100%;
+            order: 2;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            position: relative;
+            @include minWidth(768px) {
+                order: 1;
+                width: 70%;
+            }
+
+            img {
+                position: relative;
+                width: 80%;
+                left: -20%;
+                z-index: 2;
+            }
+            .square {
+                position: absolute;
+                left: -240px;
+                z-index: 1;
+                top: -100px;
+                background: #444;
+                width: 300px;
+                height: 300px;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+                @include minWidth(768px) {
+                    left: -200px;
+                    top: -30px;
+                }
+
+                &_insquare {
+                    width: 250px;
+                    height: 250px;
+                    position: absolute;
+                    border: 1px solid $lightBlue;
+                    top: 50px;
+                    box-shadow: 0 0 5px $lightBlue;
+                }
+
+            }
+            button {
+                background: $lightBlue;
+                border: 1px solid $lightBlue;
+                display: block;
+                font: 12px $raleway;
+                color: #fff;
+                margin: 0 auto;
+                padding: 10px 50px;
+                @include minWidth(768px) {
+                    display: none;
+                }
+            }
+
+        }
+        &_intro {
+            order: 1;
+            width: 100%;
+            @include minWidth(768px) {
+                order: 2;
+                width: 50%;
+            }
+
+            h1 {
+                font: 18px $syncopate;
+                text-align: center;
+                margin-top: 20px;
+                @include minWidth(768px) {
+                    text-align: left;
+                    margin-top: 50px;
+                    width: 70%;
+                    font-size: 24px;
+                }
+            }
+            p {
+                font: 12px $raleway;
+                text-align: center;
+                width: 80%;
+                margin: 20px auto;
+                @include minWidth(768px) {
+                    text-align: left;
+                    margin: 20px 0;
+                    width: 70%;
+                    font-size: 14px;
+                }
+            }
+            button {
+                display: none;
+                background: $lightBlue;
+                border: 1px solid $lightBlue;
+                font: 16px $raleway;
+                color: #fff;
+                margin: 0 auto;
+                padding: 10px 50px;
+                @include minWidth(768px) {
+                    display: block;
+                    margin: 0;
+                }
+            }
+        }
+
+    }
+}

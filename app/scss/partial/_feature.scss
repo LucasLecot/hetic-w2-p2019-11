@@ -11,16 +11,14 @@
         }
         .title {
             position: absolute;
-            font: 24px "Syncopate", sans-serif;
-            font-weight: bold;
             text-transform: uppercase;
             top: 20px;
-            left: 30px;
-            @include minWidth($widthTablet) {
-                font-size: 26px;
-            }
-            @include minWidth($widthDesktop) {
-                font-size: 30px;
+            color: #000;
+            @include minWidth(768px) {
+                left: 30px;
+                &:after {
+                    background: #000;
+                }
             }
         }
 
@@ -35,6 +33,7 @@
             box-shadow: 0 0 0 0 rgba(115, 213, 255, 1);
             animation: pulse 1.4s cubic-bezier(0.66, 0, 0, 1) infinite;
             animation-fill-mode: both;
+            opacity: 0.5;
 
             @include minWidth($widthTablet) {
                 top: 49%;
@@ -61,8 +60,11 @@
                 }
             }
 
-            &.in p {
+            &.in {
                 opacity: 1;
+                p{
+                    opacity:1;
+                }
             }
             &:hover p {
                 opacity: 1;
