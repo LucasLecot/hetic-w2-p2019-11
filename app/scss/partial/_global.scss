@@ -2,6 +2,34 @@ body {
 
   width: 100%;
 
+  h2 {
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: $syncopate;
+    font-size: 1.9rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    position: relative;
+    @include minWidth($widthTablet) {
+      text-align: left;
+    }
+    @include minWidth($widthDesktop) {
+      font-size: 2.3rem;
+
+      &:after {
+        content: '';
+        background: white;
+        height: 1px;
+        width: 10%;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+      }
+    }
+  }
+
   .fullScreenPart {
 
     height: 500px;
