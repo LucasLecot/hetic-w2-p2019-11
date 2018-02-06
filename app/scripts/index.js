@@ -24,3 +24,16 @@ function moveScreen(event) {
     insideCarView.style.backgroundPosition = newvalueX + "px " + newvalueY + "px";
 }
 
+const contentPoint = document.querySelectorAll(".fullScreenPart_feature__point");
+const contentAnim = document.querySelectorAll(".feature_content");
+
+for(let i = 0; i < contentPoint.length; i++) {
+    contentPoint[i].addEventListener("click", function () {
+        let contentAnimIn = document.querySelector(".feature_content.in");
+        let contentPointIn = document.querySelector(".fullScreenPart_feature__point.in");
+        contentPointIn.classList.remove("in");
+        contentAnimIn.classList.remove("in");
+        contentAnim[i].classList.add("in");
+        contentPoint[i].classList.add("in");
+    });
+}
