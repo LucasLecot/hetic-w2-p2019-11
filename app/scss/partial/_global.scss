@@ -3,7 +3,12 @@ body {
   width: 100%;
 
   .fullScreenPart {
-    height: 100vh;
+
+    height: 500px;
+
+    @include minWidth($widthDesktop) {
+      height: 100vh;
+    }
   }
 
 
