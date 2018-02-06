@@ -1,0 +1,210 @@
+.fullScreenPart.fullScreenPart--list {
+    height: auto;
+
+    .fullScreenPart_feature {
+        background-size: 100%;
+        background-repeat: no-repeat;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+        .title {
+            position: absolute;
+            font: 24px "Syncopate", sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            top: 20px;
+            left: 30px;
+            @include minWidth($widthTablet) {
+                font-size: 26px;
+            }
+            @include minWidth($widthDesktop) {
+                font-size: 30px;
+            }
+        }
+
+        &__point {
+            position: absolute;
+            top: 45%;
+            left: 14%;
+            width: 20px;
+            height: 20px;
+            background: $lightBlue;
+            border-radius: 100%;
+            box-shadow: 0 0 0 0 rgba(115, 213, 255, 1);
+            animation: pulse 1.4s cubic-bezier(0.66, 0, 0, 1) infinite;
+            animation-fill-mode: both;
+
+            @include minWidth($widthTablet) {
+                top: 49%;
+                left: 19%;
+            }
+            p {
+                font: 11px $syncopate;
+                font-weight: bold;
+                color: white;
+                position: absolute;
+                top: 170%;
+                left: -70%;
+                opacity: 0;
+                -webkit-transition: 0.5s;
+                -moz-transition: 0.5s;
+                -ms-transition: 0.5s;
+                -o-transition: 0.5s;
+                transition: 0.5s;
+                @include minWidth($widthTablet) {
+                    font-size: 14px;
+                }
+                @include minWidth($widthDesktop) {
+                    font-size: 17px;
+                }
+            }
+
+            &.in p {
+                opacity: 1;
+            }
+            &:hover p {
+                opacity: 1;
+            }
+
+        }
+        &__point:nth-of-type(2) {
+            @extend .fullScreenPart_feature__point;
+            top: 32%;
+            left: 38%;
+            @include minWidth($widthTablet) {
+                top: 35%;
+                left: 38%;
+            }
+        }
+        &__point:nth-of-type(3) {
+            @extend .fullScreenPart_feature__point;
+            top: 27%;
+            left: 63%;
+            @include minWidth($widthTablet) {
+                top: 31%;
+                left: 63%;
+            }
+        }
+        &__point:nth-of-type(4) {
+            @extend .fullScreenPart_feature__point;
+            top: 55%;
+            left: 85%;
+            @include minWidth($widthTablet) {
+                top: 45%;
+                left: 78%;
+            }
+        }
+
+    }
+
+    .feature_content {
+        opacity: 0;
+        display: none;
+
+        &.in {
+            opacity: 1;
+            display: flex;
+            justify-content: center;
+            margin: 10px auto;
+            @include minWidth($widthTablet) {
+                margin: 20px auto;
+            }
+            @include minWidth($widthDesktop) {
+                margin: -50px auto;
+            }
+
+            ul {
+                width: 90%;
+                display: block;
+                border-radius: 4px;
+                overflow: hidden;
+                box-shadow: 0 1px 6px 3px #ddd;
+                background: #fff;
+                position: relative;
+                @include minWidth($widthTablet) {
+                    width: 70%;
+                }
+                @include minWidth($widthDesktop) {
+                    width: 60%;
+                    top: -80px;
+                }
+
+                li {
+                    position: relative;
+                    border-top: 1px solid #000;
+                    padding-bottom: 5px;
+                    display: flex;
+                    align-items: center;
+                    animation: fadeIn 0.5s ease-in-out;
+                    animation-fill-mode: both;
+
+                    &:first-of-type {
+                        border-top: none;
+                        padding-bottom: 0;
+                    }
+                    &:last-of-type {
+                        padding-bottom: 0;
+                    }
+                    h3 {
+                        font: 14px $syncopate;
+                        font-weight: bold;
+                        text-align: left;
+                        letter-spacing: 1px;
+                        padding: 10px 0 10px 30px;
+                        display: block;
+                        width: 100%;
+                        @include minWidth($widthTablet) {
+                            font-size: 18px;
+                            padding: 15px 0 15px 40px;
+                        }
+
+                        span {
+                            height: 3px;
+                            width: 10px;
+                            position: absolute;
+                            left: 10px;
+                            top: 15px;
+                            background: #000;
+                            @include minWidth($widthTablet) {
+                                top: 20px;
+                                left: 15px;
+                            }
+                            @include minWidth($widthDesktop) {
+                                top: 20px;
+                                left: 15px;
+                            }
+                        }
+                    }
+                    .cube {
+                        width: 20px;
+                        height: 20px;
+                        background: #000;
+                        @include minWidth($widthTablet) {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                    p {
+                        margin-left: 10px;
+                        font: 11px $raleway;
+                        @include minWidth($widthTablet) {
+                            font-size: 16px;
+                        }
+                    }
+
+                }
+
+            }
+            @for $i from 1 through 5 {
+                li:nth-of-type(#{$i}) {
+                    animation-delay: .25s * $i;
+                }
+            }
+
+        }
+
+    }
+
+}
