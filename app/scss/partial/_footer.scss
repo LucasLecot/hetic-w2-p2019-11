@@ -17,7 +17,12 @@ footer {
     margin: 0 1.5rem;
     font-size: 7rem;
     color: $white;
-
+    transition: .20s ease;
+    @include minWidth($widthDesktop) {
+      &:hover {
+        transform: scale(1.06);
+      }
+    }
   }
 
   img {
