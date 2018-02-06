@@ -1,0 +1,126 @@
+.counter {
+  padding: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: $darkGrey;
+  background-image: url("../images/volant_transparent.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  @include minWidth($widthTablet) {
+    padding: 3%;
+  }
+  h3 {
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: Syncopate;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    position: relative;
+    @include minWidth($widthTablet) {
+      text-align: left;
+    }
+  }
+  h3:after {
+    content: '';
+    background: white;
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+  }
+}
+
+.counter-wrapper {
+  position: relative;
+  .counter-info {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 22px;
+    p {
+      text-align: center;
+      font-family: 'Raleway';
+      color: white;
+    }
+  }
+}
+.counter-wrapper:last-child {
+  .counter-info {
+    top: 33%;
+  }
+}
+
+.progress-circle {
+  font-size: 20px;
+  margin: 20px;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #F2E9E1;
+  border-radius: 50%;
+  line-height: 100px;
+}
+
+.progress-circle span {
+  position: absolute;
+  line-height: 100px;
+  width: 100px;
+  text-align: center;
+  display: block;
+  box-shadow: 120px 90px 40px 20px #0ff;
+  z-index: 2;
+}
+
+.progress-circle:after{
+  border: none;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  text-align: center;
+  display: block;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  background-color: $darkGrey;
+  content: " ";
+}
+
+.left-half-clipper {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  clip: rect(0, 100px, 100px, 50px);
+}
+
+.progress-circle.over50 .left-half-clipper {
+  clip: rect(auto,auto,auto,auto);
+}
+.value-bar {
+  position: absolute;
+  clip: rect(0, 50px, 100px, 0);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid $lightBlue;
+  box-sizing: border-box;
+}
+
+.progress-circle.over50 .first50-bar {
+  position: absolute;
+  clip: rect(0, 100px, 100px, 50px);
+  background-color: $lightBlue;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.progress-circle:not(.over50) .first50-bar {
+  display: none;
+}
